@@ -11,4 +11,4 @@
  * stow common
 
 ## Использование stow
-[Страница в wiki](/dotfiles/wiki/stow)
+[Страница в wiki](https://github.com/tierpod/dotfiles/wiki/stow)
