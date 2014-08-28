@@ -12,3 +12,9 @@
 
 ## Использование stow
 [Страница в wiki](https://github.com/tierpod/dotfiles/wiki/stow)
+
+## Подключение настроек bash
+Добавить в ~/.bashrc
+```bash
+[ -d "$HOME/.config/bash/" ] && for file in $HOME/.config/bash/*.conf; do . $file; done]
+```
