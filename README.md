@@ -23,4 +23,4 @@ skin=xorzen256
 ```
 
 ## vim
-Установить kien/ctrlp.vim в ~/.vim/bundle/
+Установить [ctrlp.vim](http://kien.github.com/ctrlp.vim) в ~/.vim/bundle/
