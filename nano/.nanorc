@@ -1,0 +1,6 @@
+set smooth
+set tabsize 4
+set whitespace "«·"
+
+include "~/.config/nano/markdown.nanorc"
+include "~/.config/nano/wiki.nanorc"

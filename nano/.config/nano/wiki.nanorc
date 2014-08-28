@@ -1,0 +1,44 @@
+## Created by:	Pavel Podkorytov (pod.pavel@gmail.com)
+## Colors:		(bright) white, black, red, blue, green, yellow, magenta, cyan
+## Adopted for:	zim, dokuwiki
+syntax "wiki" "\.wiki$" "\.txt$"
+# zim tags
+color brightblack "^Content-Type:.*"
+color brightblack "^Wiki-Format:.*"
+color brightblack "^Creation-Date:.*"
+color brightblack "^Created.*"
+color brightblack "'''"
+# Emphasis: bold, italic, uderline, verbatim, strike
+color brightmagenta "\*\*[^\*\*]*\*\*"
+color brightmagenta "//[^//]*//"
+color brightmagenta "__[^__]*__"
+color brightmagenta "''[^'']*''"
+color brightmagenta "~~[^~~]*~~"
+# Footnote, no formatting
+color magenta start="\(\(" end="\)\)"
+color magenta "%%[^%%]*%%"
+# Headers
+color brightgreen "^=.(.*)=$"
+# Links
+color brightblue start="\[\[" end="\]\]"
+color brightblue "(http|https|ftp|socks|file)://[^[:space:]]*"
+color brightred "[[:alpha:]_.]*\@[[:alpha:]]*\.[[:alpha:]]*"
+# Bullets
+color brightyellow "^\*\s"
+color brightyellow "^\s*\*\s"
+color brightyellow "^\-\s"
+color brightyellow "^\s*\-\s"
+# Checkboxes
+color brightyellow "\[[ *x]]\s"
+# Images
+color cyan start="\{\{" end="\}\}"
+# Quoting
+color red "^>.*$"
+
+# Dokuwiki tags
+color magenta start="<del>" end="</del>"
+color magenta start="<code" end="</code>"
+color magenta start="<file" end="</file>"
+
+# Comments
+color brightblack "(^| )(#|;).*"
