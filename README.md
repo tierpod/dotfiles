@@ -11,4 +11,4 @@
  * stow common
 
 ## Использование stow
-[Страница в wiki](Wiki/stow)
+[Страница в wiki](/dotfiles/wiki/stow)
