@@ -18,3 +18,10 @@
 ```bash
 [ -d "$HOME/.config/bash/" ] && for file in $HOME/.config/bash/*.conf; do . $file; done]
 ```
+
+## Подключение настроек mc
+Добавить в ~/.config/mc/ini
+```ini
+[Midnight-Commander]
+skin=xorzen256
+```
