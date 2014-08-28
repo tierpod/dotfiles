@@ -9,15 +9,18 @@
  * cd dotfiles
  * stow bash
 
-## Подключение настроек bash
+## bash
 Добавить в ~/.bashrc
 ```bash
 [ -d "$HOME/.config/bash/" ] && for file in $HOME/.config/bash/*.conf; do . $file; done]
 ```
 
-## Подключение настроек mc
+## mc
 Добавить в ~/.config/mc/ini
 ```ini
 [Midnight-Commander]
 skin=xorzen256
 ```
+
+## vim
+Установить kien/ctrlp.vim в ~/.vim/bundle/
