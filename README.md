@@ -2,12 +2,18 @@
 
 [Описание GNU stow](https://github.com/tierpod/dotfiles/wiki/stow)
 
-## Установка
- * Зависимости: git, stow (или xstow): sudo apt-get install git stow
- * cd ~
- * git clone git@github.com:tierpod/dotfiles.git
- * cd dotfiles
- * stow bash
+## Установка (Ubuntu)
+```bash
+sudo apt-get install git stow #установить зависимости: git, stow (или xstow):
+cd ~
+git clone git@github.com:tierpod/dotfiles.git
+cd dotfiles
+stow bash
+```
+
+## nano
+* markdown and wiki syntax highlight
+* settings
 
 ## bash
 * aliases
@@ -21,6 +27,7 @@
 
 ## mc
 * xorzen256 colorscheme
+
 Добавить в ~/.config/mc/ini
 ```ini
 [Midnight-Commander]
@@ -31,6 +38,7 @@ skin=xorzen256
 * settings
 * templates
 * zenburn colorscheme
+
 Установить [ctrlp.vim](http://kien.github.com/ctrlp.vim) в ~/.vim/bundle/
 
 ## psql
