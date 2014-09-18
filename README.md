@@ -7,7 +7,8 @@
 sudo apt-get install git stow #установить зависимости: git, stow (или xstow):
 cd ~
 git clone git@github.com:tierpod/dotfiles.git
-cd dotfiles
+cd dotfiles.git
+mkdir ~/.config/bash/
 stow bash
 ```
 
