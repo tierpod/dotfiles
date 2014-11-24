@@ -184,9 +184,9 @@ menu Encoding.utf-8 :e ++enc=utf8 <CR>
 map <F8> :emenu Encoding.<Tab>
 
 " Редко когда надо [ без пары =)
-imap [ []<LEFT>
+"imap [ []<LEFT>
 " Аналогично и для {
-imap {<CR> {<CR>}<Esc>O
+"imap {<CR> {<CR>}<Esc>O
 
 " С-q - выход из Vim 
 map <C-Q> <Esc>:qa<cr>
@@ -235,6 +235,8 @@ highlight lCursor guifg=NONE guibg=Cyan
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/bash.sh
 autocmd BufNewFile,BufRead *.md setfiletype markdown
+
+autocmd Filetype yaml setlocal expandtab
 
 " ctrlp.vim plugin
 " http://kien.github.io/ctrlp.vim/
