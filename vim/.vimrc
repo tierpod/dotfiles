@@ -75,7 +75,9 @@ set softtabstop=4
 set tabstop=4
 
 " Формат строки состояния
-set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P 
+"set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P 
+
+" Statusline never hide
 set laststatus=2
 
 " Включаем "умные" отспупы ( например, автоотступ после {)
@@ -238,8 +240,20 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 autocmd Filetype yaml setlocal expandtab
 
+" Pathogen https://github.com/tpope/vim-pathogen: ctrlp.vim, vim-airline
+execute pathogen#infect()
+
 " ctrlp.vim plugin
-" http://kien.github.io/ctrlp.vim/
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-b>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
+
+" airline theme https://github.com/paranoida/vim-airlineish
+" let g:airline_theme = 'wombat'
+let g:airline#extensions#tabline#enabled = 1
+
+" try speed up
+set synmaxcol=128
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
+

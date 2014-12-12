@@ -39,8 +39,12 @@ skin=xorzen256
 * settings
 * templates
 * zenburn colorscheme
+* plugins: 
+  * [pathogen](https://github.com/tpope/vim-pathogen) - менеджер плагинов
+  * [ctrlp.vim](http://kien.github.com/ctrlp.vim) - менеджер сессий
+  * [vim-airline](https://github.com/bling/vim-airline) - statusline
+  * [vim-airlineish](https://github.com/paranoida/vim-airlineish) - выбор отдельной темы для statusline
 
-Установить [ctrlp.vim](http://kien.github.com/ctrlp.vim) в ~/.vim/bundle/
 
 ## psql
 * ~/.psql_history per database
