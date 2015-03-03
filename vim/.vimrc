@@ -208,7 +208,7 @@ set complete+=t
 " мы разнесём по разным местам
 " Может повлиять на перезапись параметров, указанных в этом конфиге
 " Посмотреть можно через :verbose set параметр
-filetype plugin off
+filetype plugin on
 au BufRead,BufNewFile *.phps    set filetype=php
 au BufRead,BufNewFile *.thtml    set filetype=php
 
@@ -232,6 +232,9 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+" Максимальная длинна строки
+" set colorcolumn
 
 " templates
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
@@ -257,3 +260,9 @@ set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 
+" maximum textwidth
+"set colorcolumn=80
+" set textwidth=79
+
+" set listchars for :set list
+set lcs=tab:>-,eol:<,nbsp:%

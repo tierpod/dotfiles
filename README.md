@@ -23,7 +23,7 @@ stow bash
 
 Добавить в ~/.bashrc
 ```bash
-[ -d "$HOME/.config/bash/" ] && for file in $HOME/.config/bash/*.conf; do . $file; done]
+[ -d "$HOME/.config/bash/" ] && for file in $HOME/.config/bash/*.conf; do . $file; done
 ```
 
 ## mc
@@ -44,6 +44,7 @@ skin=xorzen256
   * [ctrlp.vim](http://kien.github.com/ctrlp.vim) - менеджер сессий
   * [vim-airline](https://github.com/bling/vim-airline) - statusline
   * [vim-airlineish](https://github.com/paranoida/vim-airlineish) - выбор отдельной темы для statusline
+  * [vim-ansible-yaml](https://github.com/chase/vim-ansible-yaml) - расширенная подсветка синтаксиса для yml-файлов ansible
 
 
 ## psql
