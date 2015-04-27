@@ -1,2 +1,4 @@
 *.swp
 *.local.conf
+vim/.vim/autoload
+vim/.vim/bundle
