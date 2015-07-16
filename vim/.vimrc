@@ -238,7 +238,7 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 " templates
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
-autocmd BufNewFile *.sh 0r ~/.vim/templates/bash.sh
+autocmd BufNewFile *.sh 0r ~/.vim/templates/shell.sh
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 autocmd Filetype yaml setlocal expandtab
