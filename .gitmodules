@@ -1,0 +1,12 @@
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/.vim/bundle/Dockerfile.vim"]
+	path = vim/.vim/bundle/Dockerfile.vim
+	url = git://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = git://github.com/bling/vim-airline
+[submodule "vim/.vim/bundle/vim-ansible-yaml"]
+	path = vim/.vim/bundle/vim-ansible-yaml
+	url = git://github.com/chase/vim-ansible-yaml.git
