@@ -38,13 +38,16 @@ skin=xorzen256
 ## vim
 * settings
 * templates
-* zenburn colorscheme
 * plugins: 
-  * [pathogen](https://github.com/tpope/vim-pathogen) - менеджер плагинов
-  * [ctrlp.vim](http://kien.github.com/ctrlp.vim) - менеджер сессий
-  * [vim-airline](https://github.com/bling/vim-airline) - statusline
-  * [vim-airlineish](https://github.com/paranoida/vim-airlineish) - выбор отдельной темы для statusline
-  * [vim-ansible-yaml](https://github.com/chase/vim-ansible-yaml) - расширенная подсветка синтаксиса для yml-файлов ansible
+  * [pathogen](https://github.com/tpope/vim-pathogen)
+  * [ctrlp.vim](http://kien.github.com/ctrlp.vim)
+  * [vim-airline](https://github.com/bling/vim-airline)
+  * [vim-ansible-yaml](https://github.com/chase/vim-ansible-yaml)
+* colorschemes:
+  * zenburn
+  * wombat, wombat256mod
+  * [hybrid](https://github.com/w0ng/vim-hybrid)
+  * mustang_vim_colorscheme_by_hcalves
 
 
 ## psql
