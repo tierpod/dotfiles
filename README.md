@@ -38,17 +38,20 @@ skin=xorzen256
 ## vim
 * settings
 * templates
-* plugins: 
+* plugins:
   * [pathogen](https://github.com/tpope/vim-pathogen)
   * [ctrlp.vim](http://kien.github.com/ctrlp.vim)
   * [vim-airline](https://github.com/bling/vim-airline)
   * [vim-ansible-yaml](https://github.com/chase/vim-ansible-yaml)
 * colorschemes:
-  * zenburn
-  * wombat, wombat256mod
+  * [zenburn](https://github.com/jnurmine/Zenburn) (default)
+  * [wombat](https://github.com/vim-scripts/Wombat)
+  * [wombat256mod](https://github.com/vim-scripts/wombat256.vim)
+  * [mustang](https://github.com/croaker/mustang-vim/tree/master/colors)
   * [hybrid](https://github.com/w0ng/vim-hybrid)
-  * mustang_vim_colorscheme_by_hcalves
-
+  * [dracula](https://github.com/zenorocha/dracula-theme)
+  * [darcula](https://github.com/blueshirts/darcula)
+  * [monokai](http://github.com/sickill/coloration)
 
 ## psql
 * ~/.psql_history per database
