@@ -173,6 +173,7 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 autocmd Filetype yaml setlocal expandtab
 autocmd Filetype ansible setlocal expandtab
+autocmd Filetype Dockerfile setlocal expandtab
 
 " -----------------
 " Plugins settings
