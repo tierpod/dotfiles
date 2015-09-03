@@ -179,6 +179,11 @@ autocmd Filetype Dockerfile setlocal expandtab
 " Plugins settings
 " -----------------
 
+" Plugin manager installation
+if empty(glob("~/.vim/autoload/pathogen.vim"))
+	execute '!curl -LSso ~/.vim/autoload/pathogen.vim --create-dirs https://tpo.pe/pathogen.vim'
+endif
+
 " Pathogen https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
