@@ -26,18 +26,24 @@
     - gstreamer1-plugins-good-extras
     - gstreamer1-plugins-ugly
     - gstreamer1-vaapi
+    - keepassx
     - mc
     - mysql-connector-python
     - nmap
+    - numlockx
     - p7zip
     - p7zip-plugins
     - pidgin
+    - pidgin-libnotify
     - postgresql
     - python-psycopg2
     - stow
     - strace
     - tmux
     - vim
+    - vinagre
+    - xautolock
+    - xkb-switch
   notify:
     - enable docker service
 
