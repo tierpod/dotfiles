@@ -13,7 +13,6 @@
   with_items:
     - docker
     - freetype-freeworld
-    - geary
     - git
     - gnome-tweak-tool
     - google-droid-sans-fonts
@@ -39,6 +38,7 @@
     - python-psycopg2
     - stow
     - strace
+    - thunderbird
     - tmux
     - vim
     - vinagre
