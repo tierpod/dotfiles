@@ -165,6 +165,7 @@ set complete+=t
 
 " Включаем filetype plugin
 filetype plugin on
+filetype plugin indent on
 
 " templates
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
@@ -174,6 +175,7 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 autocmd Filetype yaml setlocal expandtab
 autocmd Filetype ansible setlocal expandtab
 autocmd Filetype Dockerfile setlocal expandtab
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=8
 
 " -----------------
 " Plugins settings
