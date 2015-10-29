@@ -55,3 +55,6 @@
 
 - name: enable global fonts settings
   copy: src=etc_fonts_local.conf dest=/etc/fonts/local.conf
+
+- name: enable unicode font for tty:
+  copy: src=etc_vconsole.conf dest=/etc/vconsole.conf
