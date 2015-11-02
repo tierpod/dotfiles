@@ -12,6 +12,7 @@
   dnf: name={{ item }} state=latest
   with_items:
     - docker
+    - docker-compose
     - freetype-freeworld
     - git
     - gnome-tweak-tool
@@ -26,6 +27,7 @@
     - gstreamer1-plugins-ugly
     - gstreamer1-vaapi
     - keepassx
+    - makepasswd
     - mc
     - mysql-connector-python
     - nmap
@@ -56,5 +58,8 @@
 - name: enable global fonts settings
   copy: src=etc_fonts_local.conf dest=/etc/fonts/local.conf
 
-- name: enable unicode font for tty:
+- name: enable unicode font for tty
   copy: src=etc_vconsole.conf dest=/etc/vconsole.conf
+
+- name: ensure ~/.config/bash directory exist
+  file: path=/home/pod/.config/bash state=directory
