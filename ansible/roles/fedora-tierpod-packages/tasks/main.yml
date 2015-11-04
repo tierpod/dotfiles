@@ -1,0 +1,9 @@
+---
+- name: enable tierpod/personal-packages
+  shell: dnf copr enable tierpod/personal-packages -y
+
+- name: install packages
+  dnf: name={{ item }} state=latest
+  with_items:
+    - ubuntu-font-family
+    - pidgin-toolbar-shrink

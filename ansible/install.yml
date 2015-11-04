@@ -4,4 +4,7 @@
   sudo: yes
 
   roles:
+    - fedora-xfce-spin
     - fedora
+    - fedora-rpmfusion
+    - fedora-tierpod-packages

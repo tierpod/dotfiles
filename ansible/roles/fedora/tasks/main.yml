@@ -2,31 +2,25 @@
 - name: update all packages
   dnf: name=* state=latest
 
-- name: enable rpmfusion-free repo
-  dnf: name=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-22.noarch.rpm disable_gpg_check=yes
-
-- name: enable rpmfusion-nonfree repo
-  dnf: name=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-22.noarch.rpm disable_gpg_check=yes
-
 - name: install packages
   dnf: name={{ item }} state=latest
   with_items:
     - docker
     - docker-compose
-    - freetype-freeworld
+    - firefox
     - git
-    - gnome-tweak-tool
     - google-droid-sans-fonts
     - google-droid-sans-mono-fonts
     - google-droid-serif-fonts
-    - gstreamer1-libav
     - gstreamer1-plugins-bad-free
-    - gstreamer1-plugins-bad-freeworld
     - gstreamer1-plugins-good
     - gstreamer1-plugins-good-extras
-    - gstreamer1-plugins-ugly
     - gstreamer1-vaapi
     - keepassx
+    - kupfer
+    - libreoffice
+    - libreoffice-langpack-ru
+    - libselinux-python
     - makepasswd
     - mc
     - mysql-connector-python
@@ -38,14 +32,17 @@
     - pidgin-libnotify
     - postgresql
     - python-psycopg2
+    - slock
     - stow
     - strace
     - thunderbird
     - tmux
     - vim
     - vinagre
+    - wireshark
     - xautolock
     - xkb-switch
+    - Zim
   notify:
     - enable docker service
 

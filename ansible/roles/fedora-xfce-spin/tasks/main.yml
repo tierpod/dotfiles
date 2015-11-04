@@ -1,0 +1,44 @@
+---
+- name: ensure packages is not installed
+  dnf: name={{ item }} state=absent
+  with_items:
+    - abiword
+    - asunder
+    - catfish
+    - claws-mail
+    - claws-mail-plugins-archive
+    - claws-mail-plugins-att-remover
+    - claws-mail-plugins-attachwarner
+    - claws-mail-plugins-fetchinfo
+    - claws-mail-plugins-mailmbox
+    - claws-mail-plugins-newmail
+    - claws-mail-plugins-notification
+    - claws-mail-plugins-pgp
+    - claws-mail-plugins-rssyl
+    - claws-mail-plugins-smime
+    - claws-mail-plugins-spam-report
+    - claws-mail-plugins-tnef
+    - claws-mail-plugins-vcalendar
+    - geany
+    - geany-libgeany
+    - gnumeric
+    - ibus
+    - ibus-gtk2
+    - ibus-gtk3
+    - ibus-hangul
+    - ibus-kkc
+    - ibus-libpinyin
+    - ibus-libzhuyin
+    - ibus-m17n
+    - ibus-rawcode
+    - ibus-setup
+    - ibus-typing-booster
+    - ibus-wayland
+    - midori
+    - xfdashboard
+    - xfdashboard-themes
+    - xscreensaver-base
+    - xscreensaver-extras
+    - xscreensaver-extras-base
+    - yumex
+
