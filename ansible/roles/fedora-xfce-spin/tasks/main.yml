@@ -42,3 +42,5 @@
     - xscreensaver-extras-base
     - yumex
 
+- name: ensure xautolock autostart script is installed
+  copy: src=xautolock.desktop dest=/home/pod/.config/autostart owner=pod group=pod

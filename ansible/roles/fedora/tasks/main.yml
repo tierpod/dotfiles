@@ -5,6 +5,7 @@
 - name: install packages
   dnf: name={{ item }} state=latest
   with_items:
+    - Zim
     - docker
     - docker-compose
     - firefox
@@ -16,6 +17,8 @@
     - gstreamer1-plugins-good
     - gstreamer1-plugins-good-extras
     - gstreamer1-vaapi
+    - gvfs-mtp
+    - gvfs-smb
     - keepassx
     - kupfer
     - libreoffice
@@ -42,7 +45,6 @@
     - wireshark
     - xautolock
     - xkb-switch
-    - Zim
   notify:
     - enable docker service
 
@@ -58,5 +60,8 @@
 - name: enable unicode font for tty
   copy: src=etc_vconsole.conf dest=/etc/vconsole.conf
 
-- name: ensure ~/.config/bash directory exist
-  file: path=/home/pod/.config/bash state=directory
+- name: enable sshd socket
+  service: name=sshd.socket enabled=yes
+
+- name: start sshd socket
+  service: name=sshd.socket state=started
