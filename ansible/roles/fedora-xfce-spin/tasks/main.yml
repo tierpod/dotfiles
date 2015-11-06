@@ -1,5 +1,5 @@
 ---
-- name: ensure packages is not installed
+- name: ensure packages is removed
   dnf: name={{ item }} state=absent
   with_items:
     - abiword

@@ -2,7 +2,7 @@
 - name: update all packages
   dnf: name=* state=latest
 
-- name: install packages
+- name: ensure packages is installed
   dnf: name={{ item }} state=latest
   with_items:
     - Zim
@@ -47,6 +47,11 @@
     - xkb-switch
   notify:
     - enable docker service
+
+- name: ensure packages is removed
+  dnf: name={{ item }} state=absent
+  with_items:
+    - nano
 
 - name: add docker system group
   group: name=docker system=yes state=present

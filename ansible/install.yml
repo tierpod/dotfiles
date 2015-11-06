@@ -4,7 +4,8 @@
   sudo: yes
 
   roles:
-    - fedora-xfce-spin
-    - fedora
-    - fedora-rpmfusion
-    - fedora-tierpod-packages
+    - role: fedora-xfce-spin
+    - role: fedora
+    - role: fedora-rpmfusion
+    - role: fedora-tierpod-packages
+    - { role: ssd, tags: ssd }
