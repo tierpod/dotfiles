@@ -5,6 +5,7 @@
 - name: ensure packages is installed
   dnf: name={{ item }} state=latest
   with_items:
+    - NetworkManager-pptp-gnome
     - Zim
     - docker
     - docker-compose
