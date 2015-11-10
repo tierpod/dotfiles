@@ -9,3 +9,4 @@
     - role: fedora-rpmfusion
     - role: fedora-tierpod-packages
     - { role: ssd, tags: ssd }
+    - { role: fedora-virtualbox, tags: virtualbox }
