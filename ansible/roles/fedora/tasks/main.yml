@@ -11,6 +11,7 @@
     - docker-compose
     - firefox
     - git
+    - gnome-disk-utility
     - google-droid-sans-fonts
     - google-droid-sans-mono-fonts
     - google-droid-serif-fonts
