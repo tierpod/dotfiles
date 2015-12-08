@@ -3,6 +3,24 @@
   dnf: name={{ item }} state=absent
   with_items:
     - abiword
+    - abrt
+    - abrt-addon-ccpp
+    - abrt-addon-coredump-helper
+    - abrt-addon-kerneloops
+    - abrt-addon-pstoreoops
+    - abrt-addon-python3
+    - abrt-addon-vmcore
+    - abrt-addon-xorg
+    - abrt-cli
+    - abrt-dbus
+    - abrt-desktop
+    - abrt-gui
+    - abrt-gui-libs
+    - abrt-libs
+    - abrt-plugin-bodhi
+    - abrt-python3
+    - abrt-retrace-client
+    - abrt-tui
     - asunder
     - catfish
     - claws-mail
@@ -21,7 +39,13 @@
     - claws-mail-plugins-vcalendar
     - geany
     - geany-libgeany
+    - gnome-abrt
     - gnumeric
+    - hyperv-daemons
+    - hyperv-daemons-license
+    - hypervfcopyd
+    - hypervkvpd
+    - hypervvssd
     - ibus
     - ibus-gtk2
     - ibus-gtk3
