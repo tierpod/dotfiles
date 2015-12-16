@@ -10,6 +10,7 @@
     - docker
     - docker-compose
     - firefox
+    - gimp
     - git
     - gnome-disk-utility
     - google-droid-sans-fonts
