@@ -9,6 +9,7 @@
     - Zim
     - docker
     - docker-compose
+    - ecryptfs-utils
     - firefox
     - gimp
     - git
