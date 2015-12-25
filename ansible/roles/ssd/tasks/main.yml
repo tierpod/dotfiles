@@ -2,7 +2,7 @@
 # https://wiki.debian.org/SSDOptimization
 # https://wiki.archlinux.org/index.php/Solid_State_Drives
 
-- name: copy udev ssd rule (deadline scheduler)
+- name: ensure deadline scheduler for ssd drives are enabled
   copy: src=60-schedulers.rules dest=/etc/udev/rules.d/
 
 # ' ext4 defaults ' -> ' ext4    defaults,noatime,discard '

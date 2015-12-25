@@ -1,9 +1,9 @@
 ---
-- name: enable rpmfusion-free repo
-  dnf: name=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-23.noarch.rpm disable_gpg_check=yes
-
-- name: enable rpmfusion-nonfree repo
-  dnf: name=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-23.noarch.rpm disable_gpg_check=yes
+- name: enable rpmfusion-free and rpmfusion-nonfree repos
+  dnf: name={{ item.url }} disable_gpg_check=yes
+  with_items:
+    - { url: 'http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-23.noarch.rpm' }
+    - { url: 'http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-23.noarch.rpm' }
 
 - name: install packages
   dnf: name={{ item }} state=latest

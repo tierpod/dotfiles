@@ -1,4 +1,59 @@
 ---
+- name: ensure packages is removed
+  dnf: name={{ item }} state=absent
+  with_items:
+    - abiword
+    - abrt
+    - abrt-addon-ccpp
+    - abrt-addon-coredump-helper
+    - abrt-addon-kerneloops
+    - abrt-addon-pstoreoops
+    - abrt-addon-python3
+    - abrt-addon-vmcore
+    - abrt-addon-xorg
+    - abrt-cli
+    - abrt-dbus
+    - abrt-desktop
+    - abrt-gui
+    - abrt-gui-libs
+    - abrt-libs
+    - abrt-plugin-bodhi
+    - abrt-python3
+    - abrt-retrace-client
+    - abrt-tui
+    - asunder
+    - catfish
+    - claws-mail
+    - claws-mail-plugins-archive
+    - claws-mail-plugins-att-remover
+    - claws-mail-plugins-attachwarner
+    - claws-mail-plugins-fetchinfo
+    - claws-mail-plugins-mailmbox
+    - claws-mail-plugins-newmail
+    - claws-mail-plugins-notification
+    - claws-mail-plugins-pgp
+    - claws-mail-plugins-rssyl
+    - claws-mail-plugins-smime
+    - claws-mail-plugins-spam-report
+    - claws-mail-plugins-tnef
+    - claws-mail-plugins-vcalendar
+    - geany
+    - geany-libgeany
+    - gnome-abrt
+    - gnumeric
+    - hyperv-daemons
+    - hyperv-daemons-license
+    - hypervfcopyd
+    - hypervkvpd
+    - hypervvssd
+    - ibus
+    - ibus-gtk2
+    - ibus-gtk3
+    - ibus-hangul
+    - ibus-kkc
+    - ibus-libpinyin
+    - nano
+
 - name: update all packages
   dnf: name=* state=latest
 
@@ -52,22 +107,17 @@
   notify:
     - enable docker service
 
-- name: ensure packages is removed
-  dnf: name={{ item }} state=absent
-  with_items:
-    - nano
-
 - name: ensure docker system group is exist
   group: name=docker system=yes state=present
 
-- name: ensure user in groups
+- name: ensure user in groups docker,ecryptfs
   user: name=pod groups=docker,ecryptfs append=yes
 
-- name: enable global fonts settings
-  copy: src=etc_fonts_local.conf dest=/etc/fonts/local.conf
-
-- name: enable unicode font for tty
-  copy: src=etc_vconsole.conf dest=/etc/vconsole.conf
+- name: ensure global config are installed
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: etc_fonts_local.conf, dest: /etc/fonts/local.conf }
+    - { src: etc_vconsole.conf, dest: /etc/vconsole.conf }
 
 - name: enable sshd socket
   service: name=sshd.socket enabled=yes
