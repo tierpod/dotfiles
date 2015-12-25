@@ -57,11 +57,11 @@
   with_items:
     - nano
 
-- name: add docker system group
+- name: ensure docker system group is exist
   group: name=docker system=yes state=present
 
-- name: add user to docker group
-  user: name=pod groups=docker append=yes
+- name: ensure user in groups
+  user: name=pod groups=docker,ecryptfs append=yes
 
 - name: enable global fonts settings
   copy: src=etc_fonts_local.conf dest=/etc/fonts/local.conf
