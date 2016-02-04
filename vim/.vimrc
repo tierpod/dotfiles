@@ -1,4 +1,5 @@
 colorscheme zenburn
+
 set cursorline
 
 " Включаем несовместимость настроек с Vi (ибо Vi нам и не понадобится).
@@ -170,6 +171,7 @@ filetype plugin on
 " templates
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/shell.sh
+autocmd BufNewFile Dockerfile 0r ~/.vim/templates/Dockerfile
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 " -----------------
@@ -196,7 +198,7 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " try speed up
-set synmaxcol=128
+set synmaxcol=200
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
