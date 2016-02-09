@@ -24,7 +24,7 @@ _fabric()
 			;;
 		*)
 			COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-			return 0	
+			return 0
 			;;
 	esac
 }
