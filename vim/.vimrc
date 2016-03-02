@@ -197,6 +197,9 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
+" vim-autopep8
+let g:autopep8_max_line_length=100
+
 " try speed up
 set synmaxcol=200
 set ttyfast " u got a fast terminal
@@ -208,4 +211,4 @@ set lazyredraw " to avoid scrolling problems
 " set textwidth=79
 
 " set listchars for :set list
-set listchars=tab:>-,eol:<,nbsp:%,trail:.
+set listchars=tab:--,eol:<,nbsp:·,trail:.
