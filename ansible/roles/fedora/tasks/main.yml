@@ -88,8 +88,6 @@
     - mysql-connector-python
     - nmap
     - numlockx
-    - p7zip
-    - p7zip-plugins
     - pidgin
     - pidgin-libnotify
     - postgresql
