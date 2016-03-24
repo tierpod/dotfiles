@@ -13,3 +13,6 @@
 [submodule "vim/.vim/bundle/vim-markdown-folding"]
 	path = vim/.vim/bundle/vim-markdown-folding
 	url = git@github.com:nelstrom/vim-markdown-folding.git
+[submodule "vim/.vim/bundle/vim-autopep8"]
+	path = vim/.vim/bundle/vim-autopep8
+	url = git@github.com:tell-k/vim-autopep8.git

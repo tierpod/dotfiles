@@ -1,3 +1,4 @@
 *.swp
 *.local.conf
 vim/.vim/spell/
+.netrwhist
