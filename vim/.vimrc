@@ -171,7 +171,6 @@ filetype plugin on
 " templates
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/shell.sh
-autocmd BufNewFile Dockerfile 0r ~/.vim/templates/Dockerfile
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 " -----------------
@@ -207,7 +206,7 @@ set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 
 " maximum textwidth
-" set colorcolumn=80
+set colorcolumn=80
 " set textwidth=79
 
 " set listchars for :set list
