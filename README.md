@@ -39,11 +39,12 @@ skin=xorzen256
 * settings
 * templates
 * plugins (submodules):
-  * [pathogen](https://github.com/tpope/vim-pathogen)
   * [ctrlp.vim](http://kien.github.com/ctrlp.vim)
+  * [pathogen](https://github.com/tpope/vim-pathogen)
   * [vim-airline](https://github.com/bling/vim-airline)
   * [vim-ansible-yaml](https://github.com/chase/vim-ansible-yaml)
   * [vim-markdown-folding](vim-markdown-folding)
+  * [vim-surround](https://github.com/tpope/vim-surround)
 * colorschemes:
   * [zenburn](https://github.com/jnurmine/Zenburn) (default)
   * [wombat](https://github.com/vim-scripts/Wombat)

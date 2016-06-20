@@ -211,3 +211,12 @@ set colorcolumn=80
 
 " set listchars for :set list
 set listchars=tab:--,eol:<,nbsp:·,trail:.
+
+" https://habrahabr.ru/post/303524/
+" более удобная работа с кириллицей. При нажатии <C-6> в режиме вставки, vim
+" изменит режим с "Insert" на "Insert (lang)", после чего будут вводиться
+" русские символы. Если вернуться в нормальный режим, то все команды будут
+" работать.
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
