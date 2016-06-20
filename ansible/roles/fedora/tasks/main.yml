@@ -1,5 +1,5 @@
 ---
-- name: ensure packages is removed
+- name: ensure packages are removed
   dnf: name={{ item }} state=absent
   with_items:
     - abiword
@@ -57,7 +57,7 @@
 - name: update all packages
   dnf: name=* state=latest
 
-- name: ensure packages is installed
+- name: ensure packages are installed
   dnf: name={{ item }} state=latest
   with_items:
     - NetworkManager-pptp-gnome

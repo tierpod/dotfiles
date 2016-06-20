@@ -9,4 +9,3 @@
   with_items:
     - ubuntu-font-family
     - pidgin-toolbar-shrink
-    - keepassx

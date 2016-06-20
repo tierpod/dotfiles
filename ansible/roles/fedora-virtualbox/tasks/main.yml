@@ -3,7 +3,9 @@
   rpm_key: key=https://www.virtualbox.org/download/oracle_vbox.asc state=present
 
 - name: enable oracle repository file
-  get_url: url=http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo dest=/etc/yum.repos.d/virtualbox.repo
+  get_url:
+    url: 'http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo'
+    dest: '/etc/yum.repos.d/virtualbox.repo'
 
 - name: install virtualbox
   dnf: name={{ item }} state=latest
