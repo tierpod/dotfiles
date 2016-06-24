@@ -97,6 +97,7 @@
   - pidgin-libnotify
   - postgresql
   - python-psycopg2
+  - python2-docopt
   - slock
   - stow
   - strace
