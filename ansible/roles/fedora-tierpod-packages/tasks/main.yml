@@ -4,8 +4,14 @@
   args:
     creates: /etc/yum.repos.d/_copr_tierpod-personal-packages.repo
 
+- name: enable tierpod/gtk2-without-tooltip-patch
+  shell: dnf copr enable tierpod/gtk2-without-tooltip-patch -y
+  args:
+    creates: /etc/yum.repos.d/_copr_tierpod-gtk2-without-tooltip-patch.repo
+
 - name: install packages
   dnf: name={{ item }} state=latest
   with_items:
-    - ubuntu-font-family
-    - pidgin-toolbar-shrink
+  - gtk2
+  - pidgin-toolbar-shrink
+  - ubuntu-font-family

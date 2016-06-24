@@ -2,57 +2,61 @@
 - name: ensure packages are removed
   dnf: name={{ item }} state=absent
   with_items:
-    - abiword
-    - abrt
-    - abrt-addon-ccpp
-    - abrt-addon-coredump-helper
-    - abrt-addon-kerneloops
-    - abrt-addon-pstoreoops
-    - abrt-addon-python3
-    - abrt-addon-vmcore
-    - abrt-addon-xorg
-    - abrt-cli
-    - abrt-dbus
-    - abrt-desktop
-    - abrt-gui
-    - abrt-gui-libs
-    - abrt-libs
-    - abrt-plugin-bodhi
-    - abrt-python3
-    - abrt-retrace-client
-    - abrt-tui
-    - asunder
-    - catfish
-    - claws-mail
-    - claws-mail-plugins-archive
-    - claws-mail-plugins-att-remover
-    - claws-mail-plugins-attachwarner
-    - claws-mail-plugins-fetchinfo
-    - claws-mail-plugins-mailmbox
-    - claws-mail-plugins-newmail
-    - claws-mail-plugins-notification
-    - claws-mail-plugins-pgp
-    - claws-mail-plugins-rssyl
-    - claws-mail-plugins-smime
-    - claws-mail-plugins-spam-report
-    - claws-mail-plugins-tnef
-    - claws-mail-plugins-vcalendar
-    - geany
-    - geany-libgeany
-    - gnome-abrt
-    - gnumeric
-    - hyperv-daemons
-    - hyperv-daemons-license
-    - hypervfcopyd
-    - hypervkvpd
-    - hypervvssd
-    - ibus
-    - ibus-gtk2
-    - ibus-gtk3
-    - ibus-hangul
-    - ibus-kkc
-    - ibus-libpinyin
-    - nano
+  - abiword
+  - abrt
+  - abrt-addon-ccpp
+  - abrt-addon-coredump-helper
+  - abrt-addon-kerneloops
+  - abrt-addon-pstoreoops
+  - abrt-addon-python3
+  - abrt-addon-vmcore
+  - abrt-addon-xorg
+  - abrt-cli
+  - abrt-dbus
+  - abrt-desktop
+  - abrt-gui
+  - abrt-gui-libs
+  - abrt-libs
+  - abrt-plugin-bodhi
+  - abrt-python3
+  - abrt-retrace-client
+  - abrt-tui
+  - albatross-gtk2-theme
+  - albatross-gtk3-theme
+  - albatross-xfwm4-theme
+  - astronomy-bookmarks
+  - asunder
+  - catfish
+  - claws-mail
+  - claws-mail-plugins-archive
+  - claws-mail-plugins-att-remover
+  - claws-mail-plugins-attachwarner
+  - claws-mail-plugins-fetchinfo
+  - claws-mail-plugins-mailmbox
+  - claws-mail-plugins-newmail
+  - claws-mail-plugins-notification
+  - claws-mail-plugins-pgp
+  - claws-mail-plugins-rssyl
+  - claws-mail-plugins-smime
+  - claws-mail-plugins-spam-report
+  - claws-mail-plugins-tnef
+  - claws-mail-plugins-vcalendar
+  - geany
+  - geany-libgeany
+  - gnome-abrt
+  - gnumeric
+  - hyperv-daemons
+  - hyperv-daemons-license
+  - hypervfcopyd
+  - hypervkvpd
+  - hypervvssd
+  - ibus
+  - ibus-gtk2
+  - ibus-gtk3
+  - ibus-hangul
+  - ibus-kkc
+  - ibus-libpinyin
+  - nano
 
 - name: update all packages
   dnf: name=* state=latest
@@ -60,51 +64,52 @@
 - name: ensure packages are installed
   dnf: name={{ item }} state=latest
   with_items:
-    - NetworkManager-pptp-gnome
-    - Zim
-    - docker
-    - docker-compose
-    - ecryptfs-utils
-    - firefox
-    - gimp
-    - git
-    - gnome-disk-utility
-    - google-droid-sans-fonts
-    - google-droid-sans-mono-fonts
-    - google-droid-serif-fonts
-    - gstreamer1-plugins-bad-free
-    - gstreamer1-plugins-good
-    - gstreamer1-plugins-good-extras
-    - gstreamer1-vaapi
-    - gvfs-mtp
-    - gvfs-smb
-    - keepassx
-    - kupfer
-    - libreoffice
-    - libreoffice-langpack-ru
-    - libselinux-python
-    - makepasswd
-    - mc
-    - mysql-connector-python
-    - nmap
-    - numlockx
-    - pidgin
-    - pidgin-libnotify
-    - postgresql
-    - python-psycopg2
-    - slock
-    - stow
-    - strace
-    - thunderbird
-    - tmux
-    - vim
-    - vinagre
-    - wireshark
-    - wireshark-gnome
-    - xautolock
-    - xkb-switch
+  - NetworkManager-pptp-gnome
+  - Zim
+  - docker
+  - docker-compose
+  - ecryptfs-utils
+  - firefox
+  - flatpak
+  - gimp
+  - git
+  - gnome-disk-utility
+  - google-droid-sans-fonts
+  - google-droid-sans-mono-fonts
+  - google-droid-serif-fonts
+  - gstreamer1-plugins-bad-free
+  - gstreamer1-plugins-good
+  - gstreamer1-plugins-good-extras
+  - gstreamer1-vaapi
+  - gvfs-mtp
+  - gvfs-smb
+  - keepassx
+  - kupfer
+  - libreoffice
+  - libreoffice-langpack-ru
+  - libselinux-python
+  - makepasswd
+  - mc
+  - mysql-connector-python
+  - nmap
+  - numlockx
+  - pidgin
+  - pidgin-libnotify
+  - postgresql
+  - python-psycopg2
+  - slock
+  - stow
+  - strace
+  - thunderbird
+  - tmux
+  - vim
+  - vinagre
+  - wireshark
+  - wireshark-gnome
+  - xautolock
+  - xkb-switch
   notify:
-    - enable docker service
+  - enable docker service
 
 - name: ensure docker system group is exist
   group: name=docker system=yes state=present
@@ -115,8 +120,8 @@
 - name: ensure global config are installed
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
-    - { src: etc_fonts_local.conf, dest: /etc/fonts/local.conf }
-    - { src: etc_vconsole.conf, dest: /etc/vconsole.conf }
+  - { src: etc_fonts_local.conf, dest: /etc/fonts/local.conf }
+  - { src: etc_vconsole.conf, dest: /etc/vconsole.conf }
 
 - name: enable sshd socket
   service: name=sshd.socket enabled=yes

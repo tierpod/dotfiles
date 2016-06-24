@@ -10,7 +10,7 @@
 - name: install virtualbox
   dnf: name={{ item }} state=latest
   with_items:
-    - dkms
-    - kernel-devel
-    - kernel-headers
-    - VirtualBox-5.0
+  - dkms
+  - kernel-devel
+  - kernel-headers
+  - VirtualBox-5.0
