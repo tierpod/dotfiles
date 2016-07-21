@@ -172,6 +172,7 @@ filetype plugin on
 autocmd BufNewFile *.py 0r ~/.vim/templates/python.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/shell.sh
 autocmd BufNewFile,BufRead *.md setfiletype markdown
+autocmd BufNewFile,BufRead *.j2 setfiletype jinja
 
 " -----------------
 " Plugins settings
