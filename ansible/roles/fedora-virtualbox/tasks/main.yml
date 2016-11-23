@@ -13,4 +13,5 @@
   - dkms
   - kernel-devel
   - kernel-headers
-  - VirtualBox-5.0
+  - VirtualBox-5.1
+

@@ -221,3 +221,6 @@ set listchars=tab:--,eol:<,nbsp:·,trail:.
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+
+source ~/.vim/load/abbr.vim
+

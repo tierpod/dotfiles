@@ -5,6 +5,7 @@ alias em="ecryptfs-mount-private"
 alias eu="ecryptfs-umount-private"
 alias h="history_grep"
 alias color-selection="zenity --color-selection"
+alias http="python2-http"
 
 # Mount
 alias mount.iso='sudo mount -t iso9660 -o loop'
