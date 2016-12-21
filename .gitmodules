@@ -25,3 +25,6 @@
 [submodule "vim/.vim/bundle/vim-jinja"]
 	path = vim/.vim/bundle/vim-jinja
 	url = git@github.com:lepture/vim-jinja.git
+[submodule "vim/.vim/bundle/vim-drawit"]
+	path = vim/.vim/bundle/vim-drawit
+	url = git@github.com:hrj/vim-DrawIt.git

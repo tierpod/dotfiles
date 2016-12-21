@@ -211,7 +211,9 @@ set colorcolumn=80
 " set textwidth=79
 
 " set listchars for :set list
-set listchars=tab:--,eol:<,nbsp:·,trail:.
+"set listchars=tab:--,eol:<,nbsp:·,trail:.
+set listchars=tab:›\ ,extends:>,precedes:<,eol:¬,nbsp:·,trail:-
+set list
 
 " https://habrahabr.ru/post/303524/
 " более удобная работа с кириллицей. При нажатии <C-6> в режиме вставки, vim
