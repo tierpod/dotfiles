@@ -1,2 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -eu
+
+readonly PROGNAME=$(basename $0)
 

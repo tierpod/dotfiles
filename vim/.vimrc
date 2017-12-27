@@ -212,8 +212,9 @@ set colorcolumn=80
 
 " set listchars for :set list
 "set listchars=tab:--,eol:<,nbsp:·,trail:.
-set listchars=tab:›\ ,extends:>,precedes:<,eol:¬,nbsp:·,trail:-
+set listchars=tab:›\ ,extends:>,precedes:<,eol:¬,nbsp:·,trail:·
 set list
+highlight SpecialKey ctermfg=8
 
 " https://habrahabr.ru/post/303524/
 " более удобная работа с кириллицей. При нажатии <C-6> в режиме вставки, vim
@@ -225,4 +226,10 @@ set iminsert=0
 set imsearch=0
 
 source ~/.vim/load/abbr.vim
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+endfunction
 
