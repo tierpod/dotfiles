@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Atom One Light",
+    // "editor.fontFamily": "'Ubuntu Mono', Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 15,
+    "editor.rulers": [100, 120],
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "files.insertFinalNewline": true,
+}
