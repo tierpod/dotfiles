@@ -1,10 +1,25 @@
 {
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Atom One Light",
     // "editor.fontFamily": "'Ubuntu Mono', Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 15,
     "editor.rulers": [100, 120],
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.enabled": false,
+    // python settings
     "python.linting.lintOnSave": true,
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=100",
+    ],
     "python.linting.pylintEnabled": true,
-    "files.insertFinalNewline": true,
+    "python.linting.pylintArgs": [
+        "--max-line-length=100",
+        "--disable=C0103",
+    ],
+    "python.unitTest.pyTestEnabled": true,
+    // golang settings
+    // "go.lintOnSave": "package",
+    "go.testOnSave": true,
 }
