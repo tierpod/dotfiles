@@ -1,5 +1,5 @@
 # isc-dhcpd config file syntax highlighting
-# 
+#
 # Add to Syntax file something like:
 # file \\/etc\\/dhcpd\\/\.\*.conf$ ISC-Dhcpd\sconfig
 # include /path/to/isc-dhcpd.syntax
@@ -21,7 +21,8 @@ context default
     keyword whole include brightcyan
     keyword whole on\scommit brightcyan
     keyword whole on\srelease brightcyan
-    keyword whole on\sexpire brightcyan
+    keyword whole on\sexpiry brightcyan
+    keyword whole class brightcyan
 
     keyword whole if yellow
     keyword whole elsif yellow
@@ -29,8 +30,8 @@ context default
     keyword whole on yellow
     keyword whole off yellow
     keyword whole text yellow
-    keyword whole array yellow
     keyword whole array\sof\sip-address yellow
+    keyword whole array yellow
     keyword whole none yellow
     keyword whole match yellow
     keyword whole set yellow
@@ -42,18 +43,28 @@ context default
     keyword whole binary-to-ascii yellow
     keyword whole pick-first-value yellow
     keyword whole lcase yellow
+    keyword whole range yellow
+    keyword whole netmask yellow
 
-    keyword whole host    brightmagenta
-    keyword whole group   brightmagenta
-    keyword whole subnet  brightmagenta
-    keyword whole netmask brightmagenta
+    keyword whole host brightmagenta
+    keyword whole group brightmagenta
+    keyword whole subnet brightmagenta
+    keyword whole pool brightmagenta
+    keyword whole shared-network brightmagenta
 
     keyword whole hardware\sethernet brightgreen
-    keyword whole fixed-address      brightgreen
+    keyword whole fixed-address brightgreen
+
+    keyword whole allow brightgreen
+    keyword whole deny brightred
 
 
 context # \n brown
     spellcheck
+    keyword whole TODO brightred
+    keyword whole FIX brightred
+    keyword whole dynamic\spool brightred
+    keyword !!! brightred
 
 context " " green
 context ' ' green
