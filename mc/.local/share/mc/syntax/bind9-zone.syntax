@@ -1,0 +1,32 @@
+# Bind9 zone file syntax highlighting
+# 
+# Add to Syntax file something like:
+# file \\/var\\/named\\/master\\/\.\*$ Bind9\szone
+# include /path/to/bind9-zone.syntax
+
+
+context default
+    keyword ( brightcyan
+    keyword ) brightcyan
+
+    keyword @ yellow
+    keyword whole _domainkey brightred
+    keyword whole IN   brightgreen
+
+    keyword whole AAAA  brightcyan
+    keyword whole A     brightcyan
+    keyword whole CNAME brightcyan
+    keyword whole MX    brightcyan
+    keyword whole NS    brightcyan
+    keyword whole PTR   brightcyan
+    keyword whole SOA   brightcyan
+    keyword whole TXT   brightcyan
+
+    keyword $\[ABCDEFGHIJKLMNOPQRSTUVWXYZ\] brightmagenta
+
+context ; \n brown
+    spellcheck
+
+context " " green
+context ' ' green
+
