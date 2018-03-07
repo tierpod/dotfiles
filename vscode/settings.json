@@ -22,4 +22,5 @@
     // golang settings
     // "go.lintOnSave": "package",
     "go.testOnSave": true,
+    "problems.decorations.enabled": false,
 }
