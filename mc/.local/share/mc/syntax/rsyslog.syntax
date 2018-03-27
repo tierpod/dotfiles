@@ -1,0 +1,112 @@
+# rsyslog config file syntax highlighting
+#
+# Add to Syntax file something like:
+# file \\/etc\\/rsyslog.d\\/\.\*.conf$ rsyslog\sconfig
+# include /path/to/rsyslog.syntax
+
+caseinsensitive
+
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-
+
+context default
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ; brightcyan
+    keyword , brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+
+    keyword = white
+    keyword ~~ white
+    keyword == white
+
+    keyword whole module brightcyan
+    keyword whole template brightcyan
+    keyword whole action brightcyan
+    keyword whole re_match brightcyan
+
+    keyword whole stop brightred
+    keyword whole RSYSLOG_DebugFormat brightred
+
+    keyword whole if yellow
+    keyword whole then yellow
+    keyword whole else yellow
+    keyword whole load yellow
+    keyword whole startswith yellow
+    keyword whole and yellow
+    keyword whole or yellow
+
+    #keyword whole name yellow
+    #keyword whole type yellow
+    #keyword whole string yellow
+    #keyword whole dirgroup yellow
+    #keyword whole dircreatemode yellow
+    #keyword whole filegroup yellow
+    #keyword whole filecreatemode yellow
+    #keyword whole dynafile yellow
+    #keyword whole type yellow
+    #keyword whole port yellow
+    #keyword whole protocol yellow
+    #keyword whole target yellow
+    #keyword whole template yellow
+
+    keyword whole $fromhost-ip brightmagenta
+    keyword whole $msg brightmagenta
+    keyword whole $fromhost-ip brightmagenta
+    keyword whole $app-name brightmagenta
+    keyword whole $programname brightmagenta
+    keyword whole $app-name brightmagenta
+
+
+context # \n brown
+    spellcheck
+    keyword owner brightmagenta
+    keyword source brightmagenta
+    keyword destination brightmagenta
+    keyword timing brightmagenta
+    keyword rawmsg brightmagenta
+    keyword description brightmagenta
+
+context " " green
+    keyword % brightcyan
+    keyword : brightcyan
+    keyword \\n brightcyan
+
+    keyword $YEAR brightgreen
+    keyword $MONTH brightgreen
+    keyword $DAY brightgreen
+    keyword $NOW brightgreen
+    keyword $HOUR brightgreen
+    keyword fromhost-ip brightgreen
+    keyword hostname brightgreen
+    keyword syslogtag brightgreen
+    keyword msg brightgreen
+    keyword timestamp brightgreen
+    keyword app-name brightgreen
+    keyword programname brightgreen
+
+    keyword date-rfc3339 brightcyan
+    keyword drop-last-lf brightcyan
+
+context ' ' green
+    keyword % brightcyan
+    keyword : brightcyan
+    keyword \\n brightcyan
+
+    keyword $YEAR brightgreen
+    keyword $MONTH brightgreen
+    keyword $DAY brightgreen
+    keyword $NOW brightgreen
+    keyword $HOUR brightgreen
+    keyword fromhost-ip brightgreen
+    keyword hostname brightgreen
+    keyword syslogtag brightgreen
+    keyword msg brightgreen
+    keyword timestamp brightgreen
+    keyword app-name brightgreen
+    keyword programname brightgreen
+
+    keyword date-rfc3339 brightcyan
+    keyword drop-last-lf brightcyan
