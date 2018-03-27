@@ -54,10 +54,11 @@ context default
 
     keyword whole $fromhost-ip brightmagenta
     keyword whole $msg brightmagenta
-    keyword whole $fromhost-ip brightmagenta
+    keyword whole $fromhost brightmagenta
     keyword whole $app-name brightmagenta
     keyword whole $programname brightmagenta
     keyword whole $app-name brightmagenta
+    keyword whole $hostname brightmagenta
 
 
 context # \n brown
@@ -100,6 +101,7 @@ context ' ' green
     keyword $DAY brightgreen
     keyword $NOW brightgreen
     keyword $HOUR brightgreen
+    keyword $QHOUR brightgreen
     keyword fromhost-ip brightgreen
     keyword hostname brightgreen
     keyword syslogtag brightgreen
