@@ -4,7 +4,7 @@
 
 ## Установка (Ubuntu)
 ```bash
-sudo apt-get install git stow #установить зависимости: git, stow (или xstow):
+sudo dnf install stow git
 cd ~
 git clone git@github.com:tierpod/dotfiles.git
 cd dotfiles.git
