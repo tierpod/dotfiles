@@ -1,5 +1,13 @@
 {
     "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/venv/**": true,
+        "**/.pytest_cache/**": true,
+        "**/.mypy_cache/**": true,
+    },
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Atom One Light",
     // "editor.fontFamily": "'Ubuntu Mono', Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -18,9 +26,17 @@
         "--max-line-length=100",
         "--disable=C0103",
     ],
-    "python.unitTest.pyTestEnabled": true,
+    "python.testing.pyTestEnabled": true,
+    "python.pythonPath": "${env:HOME}/Work/venv37/bin/python3.7",
+    // "python.pythonPath": "${env:HOME}/Work/venv27/bin/python2.7",
     // golang settings
     // "go.lintOnSave": "package",
     "go.testOnSave": true,
     "problems.decorations.enabled": false,
+    "[shellscript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "newUntitledFile",
 }

@@ -58,3 +58,6 @@ skin=xorzen256
 ## psql
 * ~/.psql_history per database
 * pager settings
+
+## vscode
+* settings.json -> ~/.config/Code/User/settings.json
