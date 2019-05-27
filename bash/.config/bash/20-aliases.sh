@@ -5,6 +5,8 @@ alias em="ecryptfs-mount-private"
 alias eu="ecryptfs-umount-private"
 alias h="history_grep"
 alias color-selection="zenity --color-selection"
+alias yaml2js="python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)'"
+alias venv-enable="source ./venv/bin/activate"
 
 # Mount
 alias mount.iso='sudo mount -t iso9660 -o loop'
