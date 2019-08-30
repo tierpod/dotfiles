@@ -4,7 +4,7 @@
 # file \\/etc\\/nginx\\/.\*\\.conf$ nginx\sconfig
 # include /path/to/nginx.syntax
 
-wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_.:
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-.:
 
 context default
     keyword { brightcyan
@@ -23,12 +23,13 @@ context default
     #keyword @\[abcdefghijklmnopqrstuvwxyz_\] brightmagenta
 
     # sections
-    keyword whole server yellow
-    keyword whole location yellow
-    keyword whole events yellow
-    keyword whole http yellow
-    keyword whole stream yellow
-    keyword whole upstream yellow
+    keyword whole server brightcyan
+    keyword whole location brightcyan
+    keyword whole events brightcyan
+    keyword whole http brightcyan
+    keyword whole stream brightcyan
+    keyword whole upstream brightcyan
+    keyword whole map brightcyan
 
     # params
     keyword whole index white
@@ -63,6 +64,8 @@ context default
     keyword whole proxy_cache_valid white
     keyword whole proxy_next_upstream white
     keyword whole proxy_next_upstream_tries white
+    keyword whole proxy_buffers white
+    keyword whole proxy_cache_path white
     keyword whole limit_rate white
 #    keyword whole user white
 #    keyword whole worker_processes white
@@ -99,27 +102,28 @@ context default
     keyword $proxy_add_x_forwarded_for brightmagenta
     keyword $document_root brightmagenta
     keyword $fastcgi_script_name brightmagenta
+    keyword $server_name brightmagenta
 
     # keywords
-    keyword whole if brightcyan
-    keyword whole if_not_empty brightcyan
-    keyword whole break brightcyan
-#    keyword whole always brightcyan
-#    keyword whole main brightcyan
-#    keyword whole all brightcyan
-#    keyword whole ssl brightcyan
-    keyword whole internal brightcyan
-    keyword whole include brightcyan
-    keyword whole return brightcyan
-    keyword whole default brightcyan
-    keyword whole default_server brightcyan
-    keyword whole map brightcyan
+    keyword whole if yellow
+    keyword whole if_not_empty yellow
+    keyword whole break yellow
+#    keyword whole always yellow
+#    keyword whole all yellow
+#    keyword whole ssl yellow
+    keyword whole internal yellow
+    keyword whole include yellow
+    keyword whole return yellow
+    keyword whole default yellow
+    keyword whole default_server yellow
+
 
     keyword whole deny brightred
     keyword whole allow brightgreen
-
     keyword whole off brightred
     keyword whole on brightgreen
+    keyword whole no brightred
+    keyword whole yes brightgreen
 
 # comment
 context # \n brown
