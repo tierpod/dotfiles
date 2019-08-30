@@ -1,0 +1,111 @@
+# nginx config file syntax highlighting
+#
+# Add to Syntax file something like:
+# file \\/etc\\/nginx\\/.\*\\.conf$ nginx\sconfig
+# include /path/to/nginx.syntax
+
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_.
+
+context default
+    keyword { brightcyan
+    keyword } brightcyan
+
+    keyword ; white
+    keyword = white
+    keyword ~ white
+    keyword : white
+    keyword @ white
+
+    # named location
+    #keyword @\[abcdefghijklmnopqrstuvwxyz_\] brightmagenta
+
+    # sections
+    keyword whole server yellow
+    keyword whole location yellow
+    keyword whole events yellow
+    keyword whole http yellow
+
+    # params
+    keyword whole index white
+    keyword whole access_log white
+    keyword whole error_log white
+    keyword whole root white
+    keyword whole listen white
+    keyword whole server_name white
+    keyword whole ssl_certificate white
+    keyword whole ssl_certificate_key white
+    keyword whole add_header white
+    keyword whole rewrite white
+    keyword whole resolver white
+    keyword whole set white
+    keyword whole try_files white
+    keyword whole proxy_pass white
+    keyword whole proxy_store white
+    keyword whole proxy_store_access white
+    keyword whole proxy_set_header white
+    keyword whole proxy_http_version white
+    keyword whole proxy_ignore_headers white
+    keyword whole proxy_connect_timeout white
+    keyword whole proxy_send_timeout white
+    keyword whole proxy_read_timeout white
+    keyword whole proxy_redirect white
+    keyword whole limit_rate white
+#    keyword whole user white
+#    keyword whole worker_processes white
+#    keyword whole pid white
+    keyword whole open_file_cache white
+    keyword whole open_file_cache_valid white
+    keyword whole open_file_cache_min_uses white
+    keyword whole open_file_cache_errors white
+    keyword whole fastcgi_pass white
+    keyword whole fastcgi_param white
+
+    # vars
+    keyword $host brightmagenta
+    keyword $uri brightmagenta
+    keyword $args brightmagenta
+    keyword $is_args brightmagenta
+    keyword $scheme brightmagenta
+    keyword $request_uri brightmagenta
+    keyword $backend brightmagenta
+#    keyword wholeright $proxy_* brightmagenta
+    keyword $proxy_port brightmagenta
+    keyword $proxy_host brightmagenta
+    keyword $proxy_add_x_forwarded_for brightmagenta
+    keyword $document_root brightmagenta
+    keyword $fastcgi_script_name brightmagenta
+
+    # keywords
+    keyword whole if brightcyan
+    keyword whole if_not_empty brightcyan
+    keyword whole break brightcyan
+#    keyword whole always brightcyan
+#    keyword whole main brightcyan
+#    keyword whole all brightcyan
+#    keyword whole ssl brightcyan
+    keyword whole internal brightcyan
+    keyword whole include brightcyan
+    keyword whole return brightcyan
+    keyword whole default brightcyan
+    keyword whole default_server brightcyan
+    keyword whole map brightcyan
+
+    keyword whole deny brightred
+    keyword whole allow brightgreen
+
+    keyword whole off brightred
+    keyword whole on brightgreen
+
+# comment
+context # \n brown
+    spellcheck
+
+# string
+context " " green
+    keyword $ brightgreen
+    spellcheck
+
+# string
+context ' ' green
+    keyword $ brightgreen
+    spellcheck
