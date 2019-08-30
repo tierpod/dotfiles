@@ -4,17 +4,20 @@
 # file \\/etc\\/nginx\\/.\*\\.conf$ nginx\sconfig
 # include /path/to/nginx.syntax
 
-wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_.
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_.:
 
 context default
     keyword { brightcyan
     keyword } brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
 
     keyword ; white
     keyword = white
     keyword ~ white
     keyword : white
     keyword @ white
+    keyword | white
 
     # named location
     #keyword @\[abcdefghijklmnopqrstuvwxyz_\] brightmagenta
@@ -24,11 +27,14 @@ context default
     keyword whole location yellow
     keyword whole events yellow
     keyword whole http yellow
+    keyword whole stream yellow
+    keyword whole upstream yellow
 
     # params
     keyword whole index white
     keyword whole access_log white
     keyword whole error_log white
+    keyword whole error_page white
     keyword whole root white
     keyword whole listen white
     keyword whole server_name white
@@ -37,9 +43,11 @@ context default
     keyword whole add_header white
     keyword whole rewrite white
     keyword whole resolver white
+    keyword whole resolver_timeout white
     keyword whole set white
     keyword whole try_files white
     keyword whole proxy_pass white
+    keyword whole proxy_bind white
     keyword whole proxy_store white
     keyword whole proxy_store_access white
     keyword whole proxy_set_header white
@@ -49,6 +57,12 @@ context default
     keyword whole proxy_send_timeout white
     keyword whole proxy_read_timeout white
     keyword whole proxy_redirect white
+    keyword whole proxy_cache white
+    keyword whole proxy_cache_key white
+    keyword whole proxy_cache_use_stale white
+    keyword whole proxy_cache_valid white
+    keyword whole proxy_next_upstream white
+    keyword whole proxy_next_upstream_tries white
     keyword whole limit_rate white
 #    keyword whole user white
 #    keyword whole worker_processes white
@@ -59,6 +73,17 @@ context default
     keyword whole open_file_cache_errors white
     keyword whole fastcgi_pass white
     keyword whole fastcgi_param white
+    keyword whole load_module white
+    keyword whole zone white
+    keyword whole hash white
+    keyword whole lbits white
+    keyword whole keepalive white
+    keyword whole keepalive_timeout white
+    keyword whole keepalive_requests white
+    keyword whole client_max_body_size white
+    keyword whole client_body_buffer_size white
+    keyword whole client_body_timeout white
+    keyword whole server_tokens white
 
     # vars
     keyword $host brightmagenta
